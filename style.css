@@ -1,0 +1,54 @@
+#gameDiv {
+  border: 3px solid black;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.main {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+#game-element {
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 0 auto;
+  height: 50px;
+}
+
+#wrapper {
+    width: 500px;
+    height: 500px;
+  /*  margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;*/
+    margin: 0 auto;
+    background: #000000;
+}
+.row {
+    width: auto;
+    height: 50px;
+    background: #313131;
+}
+.square {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    outline: 1px solid;
+    display: inline-block;
+    float: left;
+    background: #FFFFFF;
+}
+
+.alive {
+  background-color: green;
+}
+
+.dead {
+  background-color: white;
+}

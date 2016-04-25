@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html>
+
+<head>  
+    <meta charset="utf-8" />
+    <title> Serendipity</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script type="text/javascript"
+        src="node_modules/jquery/dist/jquery.min.js"></script>-->
+    <!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1> Conway's Game of Life </h1>
+  </div>
+
+  <div class="main">
+    <h2>Game Board</h2>
+    <!-- <div id="gameDiv"> </div> -->
+    <div id="wrapper"></div>
+  </div>
+
+  <div class="buttonSection">
+    <div id="game-element">
+      <h3><button class="run">[Run]</button><button class="pause">[Pause]</button><button class="step">[Step] </button><button class="clear">[Clear]</button></h3>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="rules">
+      <p>Any live cell with fewer than two live neighbours dies, as if caused by
+      under-population.</p>
+      <p>Any live cell with two or three live neighbours lives on to the next
+      generation.</p>
+      <p>Any live cell with more than three live neighbours dies, as if by
+      over-population.</p>
+      <p>Any dead cell with exactly three live neighbours becomes a live cell, as if
+      by reproduction.</p>
+    </div>
+  </div>
+
+
+</body>  
+</html>  
