@@ -31,6 +31,7 @@ $(document).ready(function () {
     $('.step').on('click', liveOrDie);
     $('.run').on('click', goGoGo);
     $('.pause').on('click', stopStop);
+    $('.clear').on('click', clearBoard);
 });
 
 // Click to make life
@@ -170,14 +171,21 @@ var liveOrDie = function() {
   }
 }
 
-var goGoGo = function() {
+function goGoGo() {
   setInterval(function() { return liveOrDie()}, 500);
 }
 
-var stopStop = function() {
+function stopStop() {
   clearInterval(goGoGo);
 }
 
+function clearBoard() {
+  for(i = 0; i < rows.length; i++) {
+
+  }
+} 
+
+// TODO: Create a function that simple loops over the array and refactor stuff out to here
 
 
 
