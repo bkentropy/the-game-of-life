@@ -171,12 +171,16 @@ var liveOrDie = function() {
   }
 }
 
+var timeouts = [];
 function goGoGo() {
-  setInterval(function() { return liveOrDie()}, 500);
+  timeouts.push(setInterval(function() { return liveOrDie()}, 500));
 }
 
 function stopStop() {
-  clearInterval(goGoGo);
+  var i = i || 0;
+  clearInterval(timeouts[i]);
+  i++;
+
 }
 
 function clearBoard() {
