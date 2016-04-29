@@ -35,7 +35,7 @@ $(document).ready(function () {
 });
 
 // Click to make life
-var turnGreen = function() {
+function turnGreen() {
   var $el = $(this);
   $el
     .addClass("alive")
@@ -43,7 +43,7 @@ var turnGreen = function() {
     .on("click", death);
 }
 
-var death = function() {
+function death() {
   var $el = $(this);
   $el
     .removeClass("alive")
@@ -54,12 +54,12 @@ var death = function() {
 
 // Start building out the logic
 // Build a map of the alive cells
-var makeMap = function(row, column) {
+function makeMap(row, column) {
   var map = [];
   var temp = []
   row = row || $('.row0');
 
-  var colAnalyze = function(row) {
+   function colAnalyze(row) {
     for ( var i = 0; i < row.children().length; i++ ) {
       var square = row.children()[i]
 
@@ -85,12 +85,12 @@ var makeMap = function(row, column) {
 
 // Write a function that checks all of the neighbors 
   // This must be done in 'one step of time'
-var checkNeighbors = function(r, c, checkThis) {
+function checkNeighbors(r, c, checkThis) {
   // keep count
   var total = 0;
 
   // check row above
-  var topRow = function(r,c) {
+  function topRow(r,c) {
     var neighbors = 0;
     if ( checkThis[r - 1] ) {
       if ( checkThis[r - 1][c - 1] === 1 ) {
@@ -106,7 +106,7 @@ var checkNeighbors = function(r, c, checkThis) {
     return neighbors
   }
   // check sides
-  var sides = function(r,c) {
+  function sides(r,c) {
     var neighbors = 0;
     if ( checkThis[r][c - 1] === 1 ) {
       neighbors += 1;
@@ -117,7 +117,7 @@ var checkNeighbors = function(r, c, checkThis) {
     return neighbors
   }
   // check row below
-  var belowRow = function(r,c) {
+  function belowRow(r,c) {
     var neighbors = 0;
     if ( checkThis[r + 1] ) {
       if ( checkThis[r + 1][c - 1] === 1 ) {
@@ -180,8 +180,11 @@ function stopStop() {
 }
 
 function clearBoard() {
-  for(i = 0; i < rows.length; i++) {
-
+  for(i = 0; i < rows; i++) {
+    for (j = 0; j < columns; j++) {
+      console.log(i, j);
+      $($('.row'+i).children()[j]).removeClass('alive')
+    }
   }
 } 
 
