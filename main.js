@@ -1,9 +1,4 @@
-// TODO: Make buttons awesomesauce
-  // Clear doesn't work
-  // pause/stop doesn't work
-
-
-// TODO: Fix footer and buttons issue
+// TODO: put the text on the left in a 1/3 ish column and the game in the right 2/3rds
 
 
 
@@ -171,15 +166,14 @@ var liveOrDie = function() {
   }
 }
 
-var timeouts = [];
+var timeouts = []; // timeouts array
 function goGoGo() {
   timeouts.push(setInterval(function() { return liveOrDie()}, 500));
 }
 
 function stopStop() {
-  var i = i || 0;
-  clearInterval(timeouts[i]);
-  i++;
+  clearInterval(timeouts[0]);
+  timeouts.pop();
 
 }
 
@@ -193,6 +187,7 @@ function clearBoard() {
 } 
 
 // TODO: Create a function that simple loops over the array and refactor stuff out to here
+// TODO: When cells to live array is created checked if it is empty at end of a round, if it is run stopStop
 
 
 
